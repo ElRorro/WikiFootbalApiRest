@@ -3,12 +3,20 @@
     <ion-title>
       Ionic Blank
     </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-left (click)='gotoFormulario()'>
+          <ion-icon name="add"></ion-icon> Add User
+        </button>
+    </ion-buttons>    
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list inset>
+    <ion-item *ngFor="let club of clubs|async">
+      <h2>{{club.id}}</h2>
+      <p>{{club.name}}</p>
+      <button ion-button color="secondary" (click)='openDetails(club)'>Ver</button> <button ion-button (click)='openEdit(club)'>Editar</button> <button ion-button color="danger" (click)='eliminarClub(club)'>Eliminar</button>
+    </ion-item>
+  </ion-list>
 </ion-content>

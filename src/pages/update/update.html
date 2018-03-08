@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>formulario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form>
+    <ion-item>
+      <ion-label>Logo</ion-label>
+      <ion-input type="text" [(ngModel)]="logo" name="logo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Key</ion-label>
+      <ion-input type="text" [(ngModel)]="key" name="key"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Code</ion-label>
+      <ion-input type="text" [(ngModel)]="code" name="code"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ligue</ion-label>
+      <ion-input type="text" [(ngModel)]="ligue" name="ligue"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Country</ion-label>
+      <ion-input type="text" [(ngModel)]="country" name="country"></ion-input>
+    </ion-item>
+    
+    <button ion-button type="submit" block (click)="updateClub()">Add Club</button>
+  </form>
+  </ion-content>
